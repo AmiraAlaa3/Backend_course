@@ -1,0 +1,17 @@
+defmodule Sort do
+  def bubble_sort(arr) do
+    for i <- 0..(length(arr) - 1) do
+      for j <- 0..(length(arr) - i - 2) do
+        if arr[j+1] < arr[j] do
+          temp = arr[j]
+          arr[j] = arr[j+1]
+          arr[j+1] = temp
+        end
+      end
+    end
+    arr
+  end
+end
+
+arr = [2, 5, 1, 4, 3]
+IO.inspect Sort.bubble_sort(arr)
