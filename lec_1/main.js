@@ -1,3 +1,4 @@
+// using closure build fibonoci series
 function fibonacci(){
     let f=0,s=1;
     return function(){
